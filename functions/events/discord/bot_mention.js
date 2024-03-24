@@ -52,25 +52,11 @@ async function handleImagePrompt() {
   return predictedTextJson.output;
 }
 
-/////////////////// START /////////////////////////////////////////
+
 
 await lib.discord.channels['@0.3.2'].typing.create({
   channel_id: context.params.event.channel_id,
 });
-
-// const queryStringContent = formatStringForURLQuery(
-  // context.params.event.content
-    // .replace('<@1052852205855715380>', '')
-    // .replace('<@1052879238224687104>', '').trim()
-// );
-
-// console.log(queryStringContent);
-
-// const result = await lib.http.request['@1.1.7'].get({
-  // url: `https://api.duckduckgo.com/?q=${queryStringContent}&format=json&pretty=1&no_html=1&skip_disambig=1`,
-// });
-
-// console.log('RESULT:', result.data);
 
 let imageContext = '';
 
