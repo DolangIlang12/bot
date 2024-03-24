@@ -1,10 +1,10 @@
 const lib = require('lib')({token: process.env.STDLIB_SECRET_TOKEN});
 
-// lib.discord.users['@0.2.1'].me.status.update({
-// activity_name: `dreams float by`,
-// activity_type: 'WATCHING',
-// status: 'ONLINE'
-// });
+ lib.discord.users['@0.2.1'].me.status.update({
+ activity_name: `dreams float by`,
+ activity_type: 'WATCHING',
+ status: 'ONLINE'
+ });
 
 async function text2image(prompt, params = undefined) {
   defaultParams = {
@@ -13,15 +13,11 @@ async function text2image(prompt, params = undefined) {
         text: prompt,
         weight: 1,
       },
-      // {
-      // text: 'bad photo',
-      // weight: -1,
-      // },
     ],
     width: 704,
     height: 512,
     steps: 35,
-    //sampler:"K_DPMPP_2M",
+    sampler:"K_DPMPP_2M",
     cfg_scale: 6.5,
     clip_guidance_preset: 'FAST_BLUE',
   };
